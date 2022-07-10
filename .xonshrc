@@ -1,0 +1,12 @@
+$PROMPT = '{branch_color}{curr_branch:[{}] }{RESET}{env_name}{INTENSE_YELLOW}{user}@{INTENSE_PURPLE}{hostname}{INTENSE_YELLOW}{cwd}{INTENSE_WHITE}>{RESET}'
+
+$AUTO_CD = True
+$MOUSE_SUPPORT = True
+
+
+aliases["sudo"] = "sudo "
+aliases["docker"] = "podman"
+aliases["python"] = "python3"
+aliases["config"] = "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+aliases["bak"] = lambda file: $(cp @(file) @(file).bak)
+
