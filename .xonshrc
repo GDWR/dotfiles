@@ -1,12 +1,24 @@
 $PROMPT = '{branch_color}{curr_branch:[{}] }{RESET}{env_name}{INTENSE_YELLOW}{user}@{INTENSE_PURPLE}{hostname}{INTENSE_YELLOW}{cwd}{INTENSE_WHITE}>{RESET}'
 
+# Options using environment variables; https://xon.sh/envvars.html
+## Can just write file name to CD to it
 $AUTO_CD = True
+## You can click things!?
 $MOUSE_SUPPORT = True
 
 
+# Aliases
+## Some Xonsh fuckery
 aliases["sudo"] = "sudo "
-aliases["docker"] = "podman"
+## Prefer podman over docker, if installed
+aliases["docker"] = "podman" if $(which podman) else "docker"
+## Python2 is never being used
 aliases["python"] = "python3"
+## Used for updating persistant dotfiles
 aliases["config"] = "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+## Quickly save a backup of a file
 aliases["bak"] = lambda file: $(cp @(file) @(file).bak)
-
+## Mirror Bash aliases
+aliases["ll"] = "ls -alF"
+aliases["la"] = "ls -A"
+aliases["l"] = "ls -CF"
