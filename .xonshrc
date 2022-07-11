@@ -3,8 +3,6 @@ $PROMPT = '{branch_color}{curr_branch:[{}] }{RESET}{env_name}{INTENSE_YELLOW}{us
 # Options using environment variables; https://xon.sh/envvars.html
 ## Can just write file name to CD to it
 $AUTO_CD = True
-## You can click things!?
-$MOUSE_SUPPORT = True
 
 
 # Aliases
