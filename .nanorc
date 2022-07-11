@@ -1,1 +1,9 @@
 include "~/.nano/Dockerfile.nanorc"
+
+set autoindent
+set brackets ""')>]}"
+
+set smooth
+
+set tabstospaces
+set tabsize 4
