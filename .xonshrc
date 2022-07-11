@@ -4,6 +4,9 @@ $PROMPT = '{branch_color}{curr_branch:[{}] }{RESET}{env_name}{INTENSE_YELLOW}{us
 ## Can just write file name to CD to it
 $AUTO_CD = True
 
+# Add local bins to path
+$PATH.append($HOME+"/.local/bin")
+
 
 # Aliases
 ## Some Xonsh fuckery
@@ -17,6 +20,7 @@ aliases["config"] = "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 ## Quickly save a backup of a file
 aliases["bak"] = lambda file: $(cp @(file) @(file).bak)
 ## Mirror Bash aliases
+aliases["ls"] = "ls --hyperlink=auto --color=always"
 aliases["ll"] = "ls -alF"
 aliases["la"] = "ls -A"
 aliases["l"] = "ls -CF"
