@@ -20,7 +20,6 @@ aliases["config"] = "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 ## Quickly save a backup of a file
 aliases["bak"] = lambda file: $(cp @(file) @(file).bak)
 ## Mirror Bash aliases
-aliases["ls"] = "ls --hyperlink=auto --color=always"
 aliases["ll"] = "ls -alF"
 aliases["la"] = "ls -A"
 aliases["l"] = "ls -CF"
