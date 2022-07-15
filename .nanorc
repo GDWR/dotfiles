@@ -1,9 +1,9 @@
 include "~/.nano/Dockerfile.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/c.nanorc"
 
 set autoindent
 set brackets ""')>]}"
-
-set smooth
 
 set tabstospaces
 set tabsize 4
