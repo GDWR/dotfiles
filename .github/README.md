@@ -1,5 +1,7 @@
 # Dotfiles
 
+Example
+
 ## Install
 ```shell
 git clone --bare git@github.com:GDWR/dotfiles.git $HOME/.cfg
