@@ -15,6 +15,8 @@ $MANWIDTH=80
 aliases["sudo"] = "sudo "
 ## Prefer podman over docker, if installed
 aliases["docker"] = "podman" if $(which podman) else "docker"
+aliases["d"] = "docker"
+aliases["dc"] = "docker-compose"
 ## Python2 is never being used
 aliases["python"] = "python3"
 ## Used for updating persistant dotfiles
@@ -27,3 +29,4 @@ aliases["la"] = "ls -A"
 aliases["l"] = "ls -CF"
 aliases["n"] = "nvim"
 aliases["nano"] = "nvim"
+
