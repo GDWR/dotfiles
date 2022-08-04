@@ -7,6 +7,8 @@ $AUTO_CD = True
 # Add local bins to path
 $PATH.append($HOME+"/.local/bin")
 
+# Set man width
+$MANWIDTH=80
 
 # Aliases
 ## Some Xonsh fuckery
@@ -23,3 +25,5 @@ aliases["bak"] = lambda file: $(cp @(file) @(file).bak)
 aliases["ll"] = "ls -alF"
 aliases["la"] = "ls -A"
 aliases["l"] = "ls -CF"
+aliases["n"] = "nvim"
+aliases["nano"] = "nvim"
