@@ -1,1 +1,1 @@
-vim.cmd("colorscheme industry")
+vim.cmd("colorscheme default")
