@@ -1,14 +1,13 @@
--- Reference: https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/plugins.lua
+vim.cmd [[packadd packer.nvim]]
 
-local fn = vim.fn
 
 -- Automatically install packer
+local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system({
    "git","clone","--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path,
   })
-  print("Installing packer close and reopen Neovim...")
   vim.cmd([[packadd packer.nvim]])
 end
 
@@ -16,7 +15,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
 
@@ -43,6 +42,12 @@ return packer.startup(function(use)
   -- Useful verbs and motions
   use({ "tpope/vim-surround" })
   use({ "tpope/vim-commentary" })
+
+  -- Fuzzysearching
+  use {
+    "nvim-telescope/telescope.nvim", tag = "0.1.0",
+    requires = { {"nvim-lua/plenary.nvim"} }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
