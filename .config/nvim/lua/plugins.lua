@@ -38,7 +38,7 @@ packer.init({
 -- Install plugins
 return packer.startup(function(use)
   -- Have packer manage itself
-  use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" })
+  use({ "wbthomason/packer.nvim" })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
