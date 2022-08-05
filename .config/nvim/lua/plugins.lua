@@ -40,6 +40,10 @@ return packer.startup(function(use)
   -- Have packer manage itself
   use({ "wbthomason/packer.nvim" })
 
+  -- Useful verbs and motions
+  use({ "tpope/vim-surround" })
+  use({ "tpope/vim-commentary" })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
