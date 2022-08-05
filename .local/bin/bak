@@ -1,13 +1,3 @@
-#!/usr/bin/env xonsh
-"""
-Backup a file, creating a copy with the extension '.bak'
-"""
-
-
-def bak(file: str) -> None:
-    $(cp @(file) @(file).bak)
-
-if __name__ == "__main__":
-    _, *args = $ARGS
-    bak(*args)
+#!/usr/bin/env bash 
+cp $1 $1.bak
 
