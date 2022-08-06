@@ -1,7 +1,7 @@
 lua require("plugins")
 
-set relativenumber number
 set nocompatible
+set relativenumber number
 
 let mapleader="\<Space>"
 
