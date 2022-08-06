@@ -7,6 +7,9 @@ $AUTO_CD = True
 # Add local bins to path
 $PATH.append($HOME+"/.local/bin")
 
+# Add emacs bin to path
+$PATH.append($HOME+"/.emacs.d/bin")
+
 # Set man width
 $MANWIDTH=80
 
@@ -14,15 +17,12 @@ $MANWIDTH=80
 ## Some Xonsh fuckery
 aliases["sudo"] = "sudo "
 ## Prefer podman over docker, if installed
-aliases["docker"] = "podman" if $(which podman) else "docker"
 aliases["d"] = "docker"
 aliases["dc"] = "docker-compose"
 ## Python2 is never being used
 aliases["python"] = "python3"
 ## Used for updating persistant dotfiles
 aliases["config"] = "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-## Quickly save a backup of a file
-aliases["bak"] = lambda file: $(cp @(file) @(file).bak)
 ## Mirror Bash aliases
 aliases["ll"] = "ls -alF"
 aliases["la"] = "ls -A"
