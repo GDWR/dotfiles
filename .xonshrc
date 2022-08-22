@@ -10,8 +10,9 @@ $PATH.append($HOME+"/.local/bin")
 # Add emacs bin to path
 $PATH.append($HOME+"/.emacs.d/bin")
 
-# Set man width
-$MANWIDTH=80
+# Set man width & make less center text
+$MANWIDTH=100
+$LESSOPEN="|- centri %s"
 
 # Aliases
 ## Some Xonsh fuckery

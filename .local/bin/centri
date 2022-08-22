@@ -1,0 +1,9 @@
+#!/bin/sh
+# Define desired width of the text.
+WIDTH=100
+# Evaluate left indentation based on terminal width.
+INDENT=$(( ( $(tput cols) - $WIDTH ) / 2 ))
+# Make line of that amount of spaces.
+INDENT_LINE=$( printf %${INDENT}s )
+# Put it on the beginning of each line of the input file.
+sed "s/^/${INDENT_LINE}/" -
