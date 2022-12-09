@@ -6,9 +6,7 @@ $AUTO_CD = True
 
 # Add local bins to path
 $PATH.append($HOME+"/.local/bin")
-
-# Add emacs bin to path
-$PATH.append($HOME+"/.emacs.d/bin")
+$PATH.append($HOME+"/.cargo/bin")
 
 # Set man width & make less center text
 $MANWIDTH=100
